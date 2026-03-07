@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/IMG-20250705-WA0000.jpg" type="image/x-icon">
+    <title>Aston Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="document" href="results.html">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 id="fun">Let's have fun</h1>
+        <div class="hide" id="hide">
+            <div class="container1" id="container1">
+            
+                <label for="">Question 1</label>
+                <p>What is the fullname for this TCP?</p>
+                <input type="text" name="" id="input1">
+                <div ><button id="next1" onclick="next1()">Next</button></div>
+            </div>
+            <div class="container2" id="container2">
+                <label for="">Question 2</label>
+                <p>What is the fullname for this HTTP?</p>
+                <input type="text" name="" id="input2">
+                <div  ><button id="next2" onclick="next2()">Next</button></div>
+            </div>
+            <div class="container3" id="container3">
+            
+                <label for="">Question 3</label>
+                <p>What is the fullname for this HTTPS?</p>
+                <input type="text" name="" id="input3">
+                <div><button id="next3" onclick="next3()">Next</button></div>
+            </div>
+            <div class="container4" id="container4">
+            
+                <label for="">Question 4</label>
+                <p>What is the fullname for this IP?</p>
+                <input type="text" name="" id="input4">
+                <div ><button id="next4" onclick="next4()">Next</button></div>
+            </div>
+            <div class="container5" id="container5">
+            
+                <label for="">Question 5</label>
+                <p>What is the fullname for this MAC?</p>
+                <input type="text" name="" id="input5">
+                <div ><button id="next5" onclick="next5()">Next</button></div>
+            </div>
+            <div class="score" id="best">
+                <h1>Best Score</h1>
+                <p id="score">0</p>
+                <div class="view" id="view"><button onclick="view()">View your Score</button></div>
+                <div class="try" id="try"><button onclick="try1()">Try Again</button></div>
+            </div>
+        </div>
+<button class="but" onclick="start()" id="but">start</button>
+    </main>
+    <footer>
+      <div># ING Astonish welcomes you</div>
+        <div># Always start the name with a capital letter.</div>
+        <div>copyright reserved&copy;</div>
+    </footer>
+</body>
+</html>
+<script>
+    function start() {
+    document.getElementById('hide').style.zIndex='1';
+    document.getElementById('container1').style.display='block';
+    document.getElementById('container2').style.display='none';
+    document.getElementById('container3').style.display='none';
+    document.getElementById('container4').style.display='none';
+    document.getElementById('container5').style.display='none';
+    document.getElementById('but').style.display='none'; 
+    document.getElementById('best').style.display='none';
+    document.getElementById('fun').style.display='none';    
+}
+function next1() {
+    const answer1 = 'Transmission Control Protocol';
+    let score ;
+    const input1 = document.getElementById('input1').value;
+    if (answer1===input1) {
+        
+        score = 1;
+        
+    } else {
+        
+        score = 0;
+    }
+    
+    document.getElementById('container1').style.display='none';
+    document.getElementById('container2').style.display='block';
+    return score;
+}
+function next2() {
+    const answer2 = 'HyperText Transfer Protocol';
+    let score1;
+    const input1 = document.getElementById('input2').value;
+    if (answer2===input1) {
+        
+        score1 = 1;
+        
+    } else {
+        
+        score1 = 0;
+    }
+    document.getElementById('container2').style.display='none';
+    document.getElementById('container3').style.display='block';
+    return score1;
+}
+function next3() {
+    const answer3 = 'HyperText Transfer Protocol Secure';
+    let score2 ;
+    const input1 = document.getElementById('input3').value;
+    if (answer3===input1) {
+                score2 = 1;
+       
+    } else {
+        
+        score2 = 0;
+    }
+    document.getElementById('container3').style.display='none';
+    document.getElementById('container4').style.display='block';
+    return score2;
+}
+function next4() {
+    const answer4 = 'Internet Protocol';
+    let score3;
+    const input1 = document.getElementById('input4').value;
+    if (answer4===input1) {
+          score3 = 1;
+       
+    } else {
+        
+        score3 = 0;
+    }
+    document.getElementById('container4').style.display='none';
+    document.getElementById('container5').style.display='block';
+    return score3;
+}
+function next5() {
+    const answer5 = 'Media Access Control';
+    let score4;
+   
+    const input1 = document.getElementById('input5').value;
+    if (answer5===input1) {
+        
+        score4 = 1;
+        
+    } else {
+        
+        score4 = 0;
+    }
+    document.getElementById('container5').style.display='none';
+    document.getElementById('best').style.display='block';    
+    document.getElementById('fun').style.display='none';
+    document.getElementById('view').style.display='flex';  
+    document.getElementById('try').style.display='none';
+    return score4;
+    
+   
+      
+}
+function view() {
+    
+const high=next1()+next2()+next3()+next4()+ next5();
+localStorage.setItem('high',high);
+document.getElementById('score').textContent=high;
+if (high>=3 && high<=5) {
+    alert('Congratulations');
+} else {
+    alert('Try again');
+    document.getElementById('view').style.display='none';
+    document.getElementById('try').style.display='flex';    
+        
+}
+}    
+function try1() {
+    document.getElementById('best').style.display='none';
+    document.getElementById('container1').style.display='block';    
+    
+}
+function e() {
+    let high = Number(localStorage.getItem('high'));
+    let score6 = 0;
+    if (score6<high) {
+        score6 = high;
+    } else {
+        score6=score6;
+    }
+    document.getElementById('score1').textContent=score6;
+}    
+e();
+</script>
