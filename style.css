@@ -280,11 +280,21 @@ main{
  }
 }
 footer{
+
     div{
         padding: 10px;
         text-align: center;
             color: white;
-        
+        .fa-brands{
+            background-color: white;
+            width: 20px;
+            height: 20px;
+        }
+        .fa-solid{
+            background-color: white;
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 @media (min-width:1200px) {
