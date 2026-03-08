@@ -110,6 +110,7 @@ main{
         color: black;
     }
  .container1{
+     display: none;
     margin: 20px;
     input{
         width: 100%;
@@ -143,6 +144,7 @@ main{
     }
  }  
  .container2{
+     display: none;
     margin: 20px;
     input{
         width: 100%;
@@ -177,6 +179,7 @@ main{
     }
  } 
  .container3{
+     display: none;
     margin: 20px;
     input{
         width: 100%;
@@ -211,6 +214,7 @@ main{
     }
  }
  .container4{
+     display: none;
     margin: 20px;
     input{
         width: 100%;
@@ -245,6 +249,7 @@ main{
     }
  }
  .container5{
+     display: none;
     margin: 20px;
     input{
         width: 100%;
@@ -307,3 +312,4 @@ footer{
     
     }
 }
+
