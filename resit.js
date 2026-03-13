@@ -40,7 +40,7 @@ function automatic6() {
             document.getElementById('time3').style.display='none';
             document.getElementById('view1').style.display='flex';
         }
-    },500);
+    },1000);
     
     document.getElementById('container10').addEventListener('click',function next10() {
         timer=0;
@@ -67,7 +67,7 @@ function automatic() {
             document.getElementById('time2').style.display='none';
             document.getElementById('view').style.display='flex';
                 }
-    },500);
+    },1000);
     document.getElementById('container5').addEventListener('click',function next5() {
         timer=0;
     timeDiplay.innerText = timer;
@@ -329,3 +329,4 @@ function b() {
     document.getElementById('score1').textContent=score6;
     
 }    
+
