@@ -6,7 +6,7 @@
     <link rel="icon" href="/IMG-20250705-WA0000.jpg" type="image/x-icon">
     <title>Aston Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="document" href="results.html">
+    <link rel="stylesheet" href="results.html">
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/webfonts/fa-brands-400.ttf">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -21,40 +21,85 @@
     </nav>
     <main>
         <h1 id="fun">Let's have fun</h1>
+               <div id="time2">
+                    <p id="time">60</p>
+                    
+                </div>
+        
         <div class="hide" id="hide">
             <div class="container1" id="container1">
             
                 <label for="">Question 1</label>
-                <p>What is the fullname for this TCP?</p>
-                <input type="text" name="" id="input1">
-                <div ><button id="next1" onclick="next1()">Next</button></div>
-            </div>
+                <p>What is the fullname for this <span class="bod">TCP</span>?</p>
+                <input type="text"  id="input1">
+                <div><button id="next1" onclick="next1()">Next</button></div>
+            </div>   
             <div class="container2" id="container2">
                 <label for="">Question 2</label>
-                <p>What is the fullname for this HTTP?</p>
-                <input type="text" name="" id="input2">
-                <div  ><button id="next2" onclick="next2()">Next</button></div>
+                <p>What is the fullname for this <span class="bod">HTTP</span>?</p>
+                <input type="text"  id="input2">
+                <div><button id="next2" onclick="next2()">Next</button></div>
             </div>
             <div class="container3" id="container3">
             
                 <label for="">Question 3</label>
-                <p>What is the fullname for this HTTPS?</p>
-                <input type="text" name="" id="input3">
+                <p>What is the fullname for this <span class="bod">HTTPS</span>?</p>
+                <input type="text"  id="input3">
                 <div><button id="next3" onclick="next3()">Next</button></div>
             </div>
             <div class="container4" id="container4">
             
                 <label for="">Question 4</label>
-                <p>What is the fullname for this IP?</p>
-                <input type="text" name="" id="input4">
-                <div ><button id="next4" onclick="next4()">Next</button></div>
+                <p>What is the fullname for this <span class="bod">IP</span>?</p>
+                <input type="text"  id="input4">
+                <div><button id="next4" onclick="next4()">Next</button></div>
             </div>
+                
             <div class="container5" id="container5">
             
                 <label for="">Question 5</label>
-                <p>What is the fullname for this MAC?</p>
-                <input type="text" name="" id="input5">
-                <div ><button id="next5" onclick="next5()">Next</button></div>
+                <p>What is the fullname for this <span class="bod">MAC</span>?</p>
+                <input type="text"  id="input5">
+                <div><button id="next5" onclick="next5()">Next</button></div>
+            </div>
+                <div id="time3">
+                    <p id="time6">30</p>
+                    
+                </div>
+            
+            <div class="container6" id="container6">
+            
+                <label for="">Question 1</label>
+                <p>State the complete name of the protocol <span class="bod">OSPF</span></p>
+                <input type="text"  id="input6">
+                <div><button id="next6" onclick="next6()">Next</button></div>
+            </div>   
+            <div class="container7" id="container7">
+                <label for="">Question 2</label>
+                <p>Expand the Acronym <span class="bod">BGP</span>.</p>
+                <input type="text"  id="input7">
+                <div><button id="next7" onclick="next7()">Next</button></div>
+            </div>
+            <div class="container8" id="container8">
+            
+                <label for="">Question 3</label>
+                <p>State the full form of <span class="bod">DHCP</span>?</p>
+                <input type="text"  id="input8">
+                <div><button id="next8" onclick="next8()">Next</button></div>
+            </div>
+            <div class="container9" id="container9">
+            
+                <label for="">Question 4</label>
+                <p>What does <span class="bod">SNMP</span> stand for in networking?</p>
+                <input type="text"  id="input9">
+                <div><button id="next9" onclick="next9()">Next</button></div>
+            </div>
+            <div class="container10" id="container10">
+            
+                <label for="">Question 5</label>
+                <p>Write the complete term <span class="bod">ARP</span>.</p>
+                <input type="text"  id="input10">
+                <div><button id="next10" onclick="next10()">Next</button></div>
             </div>
             <div class="score" id="best">
                 <h1>Best Score</h1>
@@ -62,152 +107,39 @@
                 <div class="view" id="view"><button onclick="view()">View your Score</button></div>
                 <div class="try" id="try"><button onclick="try1()">Try Again</button></div>
             </div>
+            
+            <div class="score2" id="best1">
+                <h1>Best Score</h1>
+                <p id="score3">0</p>
+                <div class="view" id="view1"><button onclick="view1()">View your Score</button></div>
+                <div class="try" id="try1"><button onclick="try2()">Try Again</button></div>
+            </div>
+        </div>
+        <div class="level" id="level">
+            <h2>Let's choose your level</h2>
+            <button type="button" onclick="Easy()">Easy</button>
+            <button type="button" onclick="Hard()">Hard</button>
         </div>
 <button class="but" onclick="start()" id="but">start</button>
     </main>
     <footer>
-      <div>
+      <div id="foot">
         <p> ING Astonish welcomes you</p>
     <p> Always start the name with a capital letter.</p>
     <p>Hint: They are all networking Protocols</p>
-    <p>Remember to live your comment by clicking on the Social media handles down there.</p>
-        <p>copyright reserved&copy;</p>
+    <p>Remember to leave your comment by clicking on the Social media handles down there.</p>
+
+        </div><div>
+            
+            <p>copyright reserved&copy;</p>
+            
         </div>
-        <div>
+        <div id="foot">
             <a href="https://www.facebook.com/100095247402898/posts/pfbid02ChhpGWZuFH9roTUqtYXnKdX4tCUw6GgfrF3npLuxQZs5P2XMcfqkW8XqASokZWYjl/"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.linkedin.com/posts/alfred-yeboah-08a91a27a_aston-quiz-activity-7436210961113473024-lds9?utm_source=share&utm_medium=member_android&rcm=ACoAAEQfoOoB4J-0ubj5ldpiK6KEz1A_G2sAkXA"><i class="fa-brands fa-linkedin"></i></a>
             <a href="mailto::alfredyeboah047@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
+    <script src="resit.js"></script>
 </body>
 </html>
-<script>
-    function start() {
-    document.getElementById('hide').style.zIndex='1';
-    document.getElementById('container1').style.display='block';
-    document.getElementById('container2').style.display='none';
-    document.getElementById('container3').style.display='none';
-    document.getElementById('container4').style.display='none';
-    document.getElementById('container5').style.display='none';
-    document.getElementById('but').style.display='none'; 
-    document.getElementById('best').style.display='none';
-    document.getElementById('fun').style.display='none';    
-}
-function next1() {
-    const answer1 = 'Transmission Control Protocol';
-    let score ;
-    const input1 = document.getElementById('input1').value;
-    if (answer1===input1) {
-        
-        score = 1;
-        
-    } else {
-        
-        score = 0;
-    }
-    
-    document.getElementById('container1').style.display='none';
-    document.getElementById('container2').style.display='block';
-    return score;
-}
-function next2() {
-    const answer2 = 'HyperText Transfer Protocol';
-    let score1;
-    const input1 = document.getElementById('input2').value;
-    if (answer2===input1) {
-        
-        score1 = 1;
-        
-    } else {
-        
-        score1 = 0;
-    }
-    document.getElementById('container2').style.display='none';
-    document.getElementById('container3').style.display='block';
-    return score1;
-}
-function next3() {
-    const answer3 = 'HyperText Transfer Protocol Secure';
-    let score2 ;
-    const input1 = document.getElementById('input3').value;
-    if (answer3===input1) {
-                score2 = 1;
-       
-    } else {
-        
-        score2 = 0;
-    }
-    document.getElementById('container3').style.display='none';
-    document.getElementById('container4').style.display='block';
-    return score2;
-}
-function next4() {
-    const answer4 = 'Internet Protocol';
-    let score3;
-    const input1 = document.getElementById('input4').value;
-    if (answer4===input1) {
-          score3 = 1;
-       
-    } else {
-        
-        score3 = 0;
-    }
-    document.getElementById('container4').style.display='none';
-    document.getElementById('container5').style.display='block';
-    return score3;
-}
-function next5() {
-    const answer5 = 'Media Access Control';
-    let score4;
-   
-    const input1 = document.getElementById('input5').value;
-    if (answer5===input1) {
-        
-        score4 = 1;
-        
-    } else {
-        
-        score4 = 0;
-    }
-    document.getElementById('container5').style.display='none';
-    document.getElementById('best').style.display='block';    
-    document.getElementById('fun').style.display='none';
-    document.getElementById('view').style.display='flex';  
-    document.getElementById('try').style.display='none';
-    return score4;
-    
-   
-      
-}
-function view() {
-    
-const high=next1()+next2()+next3()+next4()+ next5();
-localStorage.setItem('high',high);
-document.getElementById('score').textContent=high;
-if (high>=3 && high<=5) {
-    alert('Congratulations');
-} else {
-    alert('Try again');
-    document.getElementById('view').style.display='none';
-    document.getElementById('try').style.display='flex';    
-        
-}
-e();
-}    
-function try1() {
-    document.getElementById('best').style.display='none';
-    document.getElementById('container1').style.display='block';    
-    
-}
-function e() {
-    let high = Number(localStorage.getItem('high'));
-    let score6 = 0;
-    if (score6<high) {
-        score6 = high;
-    } else {
-        score6=score6;
-    }
-    document.getElementById('score1').textContent=score6;
-}    
-
-</script>
